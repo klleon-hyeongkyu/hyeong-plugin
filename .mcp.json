@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "local-server": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mcp-server.py",
+      "args": ["--mode", "local"],
+      "env": {
+        "DEBUG": "true",
+        "LOG_LEVEL": "${LOG_LEVEL:-info}"
+      }
+    },
+    "http-server": {
+      "type": "http",
+      "url": "https://api.example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${API_TOKEN}",
+        "Content-Type": "application/json"
+      }
+    },
+    "sse-server": {
+      "type": "sse",
+      "url": "https://api.example.com/sse"
+    }
+  }
+}

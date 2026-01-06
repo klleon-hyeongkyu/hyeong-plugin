@@ -1,0 +1,16 @@
+{
+  "name": "hyeong-plugin",
+  "version": "1.0.0",
+  "description": "Claude Code 플러그인의 모든 구성요소를 포함한 테스트 플러그인",
+  "author": {
+    "name": "Hyeong",
+    "email": "hyeong@example.com",
+    "url": "https://github.com/hyeong"
+  },
+  "homepage": "https://github.com/hyeong/hyeong-plugin",
+  "repository": "https://github.com/hyeong/hyeong-plugin",
+  "license": "MIT",
+  "keywords": ["test", "learning", "kitchen-sink", "claude-code"],
+  "hooks": "./hooks/hooks.json",
+  "outputStyles": "./outputStyles/"
+}
