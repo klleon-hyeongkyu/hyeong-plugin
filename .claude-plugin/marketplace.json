@@ -1,0 +1,15 @@
+{
+  "name": "klleon-hyeongkyu",
+  "owner": {
+    "name": "Hyeong",
+    "email": "hyeong@klleon.io"
+  },
+  "plugins": [
+    {
+      "name": "hyeong-plugin",
+      "source": ".",
+      "description": "Claude Code 플러그인 완전체 (공식문서 기준)",
+      "version": "1.0.0"
+    }
+  ]
+}
