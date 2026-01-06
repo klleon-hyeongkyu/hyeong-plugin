@@ -8,7 +8,7 @@
     {
       "name": "hyeong-plugin",
       "source": ".",
-      "description": "Claude Code 플러그인 완전체 (공식문서 기준)",
+      "description": "[Commands, Agents, Skills, Hooks, MCP, LSP, OutputStyles] 공식문서 기준 완전체",
       "version": "1.0.0"
     }
   ]
