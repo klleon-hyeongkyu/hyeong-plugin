@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "hyeong-plugin",
-      "source": ".",
+      "source": "./",
       "description": "[Commands, Agents, Skills, Hooks, MCP, LSP, OutputStyles] 공식문서 기준 완전체",
       "version": "1.0.0"
     }
