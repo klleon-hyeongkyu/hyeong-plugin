@@ -1,0 +1,13 @@
+{
+  "name": "hyeong-design",
+  "version": "1.0.0",
+  "description": "디자인 관련 스킬 (알고리즘 아트, 브랜드 가이드라인, 캔버스, 테마)",
+  "author": {
+    "name": "Hyeong",
+    "url": "https://github.com/ppotatoG"
+  },
+  "repository": "https://github.com/ppotatoG/hyeong-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["design", "art", "brand", "canvas", "theme"],
+  "skills": "./skills/"
+}

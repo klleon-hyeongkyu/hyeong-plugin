@@ -1,187 +1,93 @@
 # hyeong-plugin
 
-Claude Code 플러그인의 **모든 구성요소**를 포함한 테스트/학습용 플러그인입니다.
-
-## 목적
-
-- Claude Code 플러그인의 모든 기능 학습
-- 각 구성요소를 하나씩 제거하며 동작 이해
-- 공식 문서 기준 완전한 구조 파악
-
-## 설치
-
-```bash
-# 플러그인 디렉토리로 이동
-cd /path/to/hyeong-plugin
-
-# Claude Code에서 플러그인 로드
-claude --plugin-dir .
-
-# 디버그 모드로 실행
-claude --plugin-dir . --debug
-```
+Claude Code 플러그인 모노레포 - 필요한 플러그인만 선택 설치 가능
 
 ## 구조
 
 ```
 hyeong-plugin/
-│
-├── .claude-plugin/
-│   ├── plugin.json          # 플러그인 매니페스트
-│   └── README.md            # plugin.json 설명서
-│
-├── commands/                 # 슬래시 커맨드
-│   ├── README.md            # commands 설명서
-│   ├── hello.md             # 기본 커맨드
-│   ├── advanced.md          # 모든 옵션 예제
-│   └── jira/                # 하위 폴더 (네임스페이싱)
-│       └── my-tickets.md    # 호출: /hyeong-plugin:my-tickets
-│
-├── agents/                   # 커스텀 에이전트
-│   ├── README.md            # agents 설명서
-│   ├── helper.md            # 기본 에이전트
-│   └── reviewer.md          # 모든 옵션 예제
-│
-├── skills/                   # 자동 활성화 스킬
-│   ├── README.md            # skills 설명서
-│   ├── greeting/            # 패턴1: 단일 참조 파일
-│   │   ├── SKILL.md
-│   │   ├── REFERENCE.md
-│   │   ├── examples.md
-│   │   └── scripts/
-│   │       └── helper.py
-│   └── code-check/          # 패턴2: 다중 참조 폴더
-│       ├── SKILL.md
-│       ├── references/
-│       │   ├── security.md
-│       │   ├── performance.md
-│       │   └── patterns.md
-│       └── examples/
-│           ├── good.md
-│           └── bad.md
-│
-├── hooks/
-│   ├── README.md            # hooks 설명서
-│   └── hooks.json           # 10개 훅 이벤트 설정
-│
-├── scripts/                  # 훅 스크립트
-│   ├── README.md            # scripts 설명서
-│   ├── pre-tool.sh
-│   ├── post-tool.sh
-│   ├── permission.sh
-│   ├── notify.sh
-│   ├── validate-prompt.sh
-│   ├── on-stop.sh
-│   ├── subagent-stop.sh
-│   ├── pre-compact.sh
-│   ├── session-start.sh
-│   └── session-end.sh
-│
-├── outputStyles/             # 응답 스타일
-│   ├── README.md            # outputStyles 설명서
-│   ├── teaching.md          # 교육 모드
-│   └── formal.md            # 공식 모드
-│
-├── docs/                     # 추가 문서
-│   ├── mcp.md               # MCP 서버 설명서
-│   └── lsp.md               # LSP 서버 설명서
-│
-├── .mcp.json                 # MCP 서버 설정 (stdio, http, sse)
-├── .lsp.json                 # LSP 서버 설정 (TypeScript, Python)
-│
-├── LICENSE
-├── CHANGELOG.md
-└── README.md                 # 이 파일
+├── plugins/
+│   ├── office/       # 문서 생성/편집
+│   ├── design/       # 디자인 관련
+│   ├── productivity/ # 생산성 도구
+│   ├── web/          # Web 개발 패턴
+│   └── dev/          # 개발 도구 + MCP 명령어
+└── README.md
 ```
 
-## 사용법
+## 플러그인 목록
 
-### Commands
+### office (hyeong-office)
+| Skill | 설명 |
+|-------|------|
+| `docx` | Word 문서 생성/편집 |
+| `xlsx` | Excel 스프레드시트 |
+| `pptx` | PowerPoint 프레젠테이션 |
+| `pdf` | PDF 생성/편집/폼 작성 |
+
+### design (hyeong-design)
+| Skill | 설명 |
+|-------|------|
+| `algorithmic-art` | p5.js 알고리즘 아트 |
+| `brand-guidelines` | 브랜드 가이드라인 적용 |
+| `canvas-design` | 비주얼 디자인 생성 |
+| `theme-factory` | 테마 스타일링 |
+| `web-artifacts-builder` | 웹 아티팩트 빌더 |
+
+### productivity (hyeong-productivity)
+| Skill | 설명 |
+|-------|------|
+| `doc-coauthoring` | 문서 공동 작성 워크플로우 |
+| `internal-comms` | 내부 커뮤니케이션 문서 |
+| `slack-gif-creator` | Slack용 GIF 생성 |
+
+### web (hyeong-web)
+| Skill | 설명 |
+|-------|------|
+| `web-tailwind-patterns` | Tailwind CSS v3/v4 패턴, cn() 유틸리티 |
+| `web-tanstack-form-patterns` | TanStack Form 패턴 |
+| `web-tanstack-query-patterns` | TanStack Query + Axios 패턴 |
+| `webapp-testing` | Playwright 웹앱 테스트 |
+
+### dev (hyeong-dev)
+| Skill | 설명 |
+|-------|------|
+| `mcp-builder` | MCP 서버 구축 가이드 |
+| `skill-creator` | 스킬 생성 가이드 |
+
+| Command | 설명 |
+|---------|------|
+| `/mcp-add:local` | MCP 로컬 설치 (현재 프로젝트) |
+| `/mcp-add:global` | MCP 전역 설치 (모든 프로젝트) |
+| `/mcp-add:shared` | MCP 프로젝트 설치 (팀 공유) |
+
+## 설치
+
+### 특정 플러그인만 설치
 
 ```bash
-# 기본 커맨드
-/hyeong-plugin:hello World
+# Office 플러그인만
+claude /install /Users/path/to/hyeong-plugin/plugins/office
 
-# 고급 커맨드 (모든 옵션)
-/hyeong-plugin:advanced arg1 arg2
+# Web 개발 플러그인만
+claude /install /Users/path/to/hyeong-plugin/plugins/web
 
-# 하위 폴더 커맨드 (jira/)
-/hyeong-plugin:my-tickets
+# Dev 도구 플러그인만
+claude /install /Users/path/to/hyeong-plugin/plugins/dev
 ```
 
-### Agents
-
-Task 도구에서 자동 사용:
-- `helper`: 기본 도움 에이전트
-- `reviewer`: 코드 리뷰 에이전트 (code-check 스킬 연동)
-
-### Skills
-
-설명(description)에 있는 키워드로 자동 활성화:
-- `greeting`: "인사" 관련 작업
-- `code-check`: "코드 리뷰" 관련 작업
-
-### Output Styles
+### 테스트
 
 ```bash
-/output-style Teaching Mode
-/output-style Formal Mode
+# 특정 플러그인 테스트
+claude --plugin-dir /path/to/hyeong-plugin/plugins/web
+
+# 다른 프로젝트에서 테스트
+cd my-project
+claude --plugin-dir /path/to/hyeong-plugin/plugins/office
 ```
-
-## 구성요소별 하위 구조 지원
-
-| 구성요소 | 하위 폴더 | scripts/ | references/ |
-|---------|----------|----------|-------------|
-| commands/ | ✅ 가능 (네임스페이싱) | ❌ | ❌ |
-| agents/ | ❌ 불가 | ❌ | ❌ |
-| skills/ | ✅ 가능 | ✅ 가능 | ✅ 가능 |
-| hooks/ | ❌ | ❌ (루트 scripts/) | ❌ |
-
-## 각 폴더별 설명서
-
-모든 폴더에 `README.md`가 있습니다:
-- `.claude-plugin/README.md` - plugin.json 모든 필드 설명
-- `commands/README.md` - frontmatter 옵션, 변수, Bash 실행
-- `agents/README.md` - frontmatter 옵션, permissionMode, model
-- `skills/README.md` - SKILL.md, references/, scripts/ 패턴
-- `hooks/README.md` - 10개 훅 이벤트, matcher, decision
-- `scripts/README.md` - stdin/stdout JSON, 환경 변수
-- `outputStyles/README.md` - keep-coding-instructions 옵션
-- `docs/mcp.md` - MCP 서버 타입, 환경 변수 확장
-- `docs/lsp.md` - LSP 설정, 언어별 예제
-
-## 테스트 방법
-
-```bash
-# 1. 플러그인 디렉토리로 이동
-cd /path/to/hyeong-plugin
-
-# 2. Claude Code 실행
-claude --plugin-dir . --debug
-
-# 3. 커맨드 테스트
-/hyeong-plugin:hello World
-
-# 4. 스킬 테스트 (키워드로 자동 활성화)
-"코드 리뷰해줘"
-
-# 5. 스타일 변경
-/output-style Teaching Mode
-```
-
-## 학습 방법
-
-1. **전체 구조 이해**: 모든 폴더와 파일 확인
-2. **설명서 읽기**: 각 폴더의 README.md 참조
-3. **하나씩 제거**: 구성요소를 제거하며 동작 변화 확인
-4. **수정 후 테스트**: 옵션 변경 후 효과 확인
-
-## 참고
-
-- [Claude Code 공식 문서](https://code.claude.com/docs)
-- [MCP 공식 문서](https://modelcontextprotocol.io)
-- [LSP 공식 문서](https://microsoft.github.io/language-server-protocol/)
 
 ## 라이선스
 
-MIT License
+- **커스텀 스킬** (web-*): MIT
+- **공식 스킬** (anthropics/skills 기반): Apache 2.0

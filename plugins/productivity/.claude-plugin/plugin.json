@@ -1,0 +1,13 @@
+{
+  "name": "hyeong-productivity",
+  "version": "1.0.0",
+  "description": "생산성 스킬 (문서 공동작성, 내부 커뮤니케이션, Slack GIF)",
+  "author": {
+    "name": "Hyeong",
+    "url": "https://github.com/ppotatoG"
+  },
+  "repository": "https://github.com/ppotatoG/hyeong-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["productivity", "docs", "communication", "slack"],
+  "skills": "./skills/"
+}

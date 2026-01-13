@@ -1,0 +1,13 @@
+{
+  "name": "hyeong-office",
+  "version": "1.0.0",
+  "description": "Office 문서 생성/편집 스킬 (Word, Excel, PowerPoint, PDF)",
+  "author": {
+    "name": "Hyeong",
+    "url": "https://github.com/ppotatoG"
+  },
+  "repository": "https://github.com/ppotatoG/hyeong-plugin",
+  "license": "Apache-2.0",
+  "keywords": ["docx", "xlsx", "pptx", "pdf", "office"],
+  "skills": "./skills/"
+}

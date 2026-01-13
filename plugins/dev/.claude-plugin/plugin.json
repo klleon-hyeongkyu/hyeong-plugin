@@ -1,0 +1,14 @@
+{
+  "name": "hyeong-dev",
+  "version": "1.0.0",
+  "description": "개발 도구 스킬 (MCP 빌더, 스킬 생성기) + MCP 설치 명령어",
+  "author": {
+    "name": "Hyeong",
+    "url": "https://github.com/ppotatoG"
+  },
+  "repository": "https://github.com/ppotatoG/hyeong-plugin",
+  "license": "MIT",
+  "keywords": ["mcp", "skill", "developer", "tools"],
+  "skills": "./skills/",
+  "commands": "./commands/"
+}
