@@ -272,7 +272,7 @@ Claude Code는 다음 순서로 스킬을 로드합니다:
 
 ```bash
 # 마켓플레이스 추가
-/plugin marketplace add ppotatoG/hyeong-plugin
+/plugin marketplace add klleon-hyeongkyu/hyeong-plugin
 
 # 플러그인 메뉴에서 개별 스킬 선택 설치
 /plugin
@@ -284,7 +284,7 @@ Claude Code는 다음 순서로 스킬을 로드합니다:
 
 ```bash
 # GitHub 직접 설치
-/plugin install github:ppotatoG/hyeong-plugin
+/plugin install github:klleon-hyeongkyu/hyeong-plugin
 
 # 로컬 설치 (개발용)
 /plugin install /path/to/hyeong-plugin
@@ -297,7 +297,7 @@ Claude Code는 다음 순서로 스킬을 로드합니다:
   "extraKnownMarketplaces": {
     "hyeong": {
       "source": "github",
-      "repo": "ppotatoG/hyeong-plugin"
+      "repo": "klleon-hyeongkyu/hyeong-plugin"
     }
   }
 }
