@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "hyeong-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Claude Code 스킬 모음 - 문서, 디자인, 웹 개발, 생산성 도구",
   "owner": {
     "name": "Hyeong",
@@ -10,126 +10,147 @@
   "plugins": [
     {
       "name": "docx",
+      "version": "1.0.0",
       "description": "[Skill] Word 문서 생성/편집 (docx.js 기반)",
       "source": "./docx",
       "category": "productivity-organization"
     },
     {
       "name": "xlsx",
+      "version": "1.0.0",
       "description": "[Skill] Excel 스프레드시트 생성/편집",
       "source": "./xlsx",
       "category": "productivity-organization"
     },
     {
       "name": "pptx",
+      "version": "1.0.0",
       "description": "[Skill] PowerPoint 프레젠테이션 생성",
       "source": "./pptx",
       "category": "productivity-organization"
     },
     {
       "name": "pdf",
+      "version": "1.0.0",
       "description": "[Skill] PDF 생성/편집/폼 작성",
       "source": "./pdf",
       "category": "productivity-organization"
     },
     {
       "name": "algorithmic-art",
+      "version": "1.0.0",
       "description": "[Skill] p5.js 기반 알고리즘 아트 생성",
       "source": "./algorithmic-art",
       "category": "creative-media"
     },
     {
       "name": "brand-guidelines",
+      "version": "1.0.0",
       "description": "[Skill] 브랜드 가이드라인 적용",
       "source": "./brand-guidelines",
       "category": "creative-media"
     },
     {
       "name": "canvas-design",
+      "version": "1.0.0",
       "description": "[Skill] 비주얼 디자인 생성 (포스터, 배너 등)",
       "source": "./canvas-design",
       "category": "creative-media"
     },
     {
       "name": "theme-factory",
+      "version": "1.0.0",
       "description": "[Skill] 10가지 프리셋 테마 스타일링",
       "source": "./theme-factory",
       "category": "creative-media"
     },
     {
       "name": "web-artifacts-builder",
+      "version": "1.0.0",
       "description": "[Skill] React/Tailwind 웹 아티팩트 빌더",
       "source": "./web-artifacts-builder",
       "category": "development"
     },
     {
       "name": "web-tailwind-patterns",
+      "version": "1.1.0",
       "description": "[Skill] Tailwind CSS v3/v4 패턴, cn() 유틸리티",
       "source": "./web-tailwind-patterns",
       "category": "development"
     },
     {
       "name": "web-tanstack-form-patterns",
+      "version": "1.1.0",
       "description": "[Skill] TanStack Form 패턴",
       "source": "./web-tanstack-form-patterns",
       "category": "development"
     },
     {
       "name": "web-tanstack-query-patterns",
+      "version": "1.0.0",
       "description": "[Skill] TanStack Query + Axios 패턴",
       "source": "./web-tanstack-query-patterns",
       "category": "development"
     },
     {
       "name": "web-nextjs-patterns",
+      "version": "1.0.0",
       "description": "[Skill] Next.js 16 SSR/i18n/middleware 패턴",
       "source": "./web-nextjs-patterns",
       "category": "development"
     },
     {
       "name": "web-context-patterns",
+      "version": "1.0.0",
       "description": "[Skill] React Context + use-context-selector 최적화 패턴",
       "source": "./web-context-patterns",
       "category": "development"
     },
     {
       "name": "webapp-testing",
+      "version": "1.0.0",
       "description": "[Skill] Playwright 웹앱 테스트",
       "source": "./webapp-testing",
       "category": "testing"
     },
     {
       "name": "mcp-builder",
+      "version": "1.0.0",
       "description": "[Skill] MCP 서버 구축 가이드 (Python/TypeScript)",
       "source": "./mcp-builder",
       "category": "development"
     },
     {
       "name": "skill-creator",
+      "version": "1.0.0",
       "description": "[Skill] Claude Code 스킬 생성 가이드",
       "source": "./skill-creator",
       "category": "development"
     },
     {
       "name": "doc-coauthoring",
+      "version": "1.0.0",
       "description": "[Skill] 문서 공동 작성 워크플로우",
       "source": "./doc-coauthoring",
       "category": "productivity-organization"
     },
     {
       "name": "internal-comms",
+      "version": "1.0.0",
       "description": "[Skill] 내부 커뮤니케이션 문서 작성",
       "source": "./internal-comms",
       "category": "communication-writing"
     },
     {
       "name": "slack-gif-creator",
+      "version": "1.0.0",
       "description": "[Skill] Slack용 GIF 생성",
       "source": "./slack-gif-creator",
       "category": "creative-media"
     },
     {
       "name": "mcp-add",
+      "version": "1.0.0",
       "description": "[Command] MCP 서버 설치 명령어 (local/global/shared)",
       "source": "./mcp-add",
       "category": "development"
