@@ -17,10 +17,39 @@ mcp__context7__query-docs(libraryId="/tanstack/form", query="Subscribe useStore 
 
 ---
 
+## 왜 TanStack Form?
+
+TanStack Form을 선택하는 이유와 React Hook Form 대비 장점.
+
+### 핵심 장점
+
+| 장점 | 설명 |
+|------|------|
+| **Type Safety** | 필드 이름 오타 시 TypeScript 컴파일 에러 |
+| **Framework Agnostic** | React, Vue, Svelte, Angular, Solid, Lit 모두 지원 |
+| **Headless** | UI 제약 없음, 자유로운 스타일링 |
+| **Performance** | Selector 패턴으로 불필요한 리렌더 방지 |
+| **Validation** | Zod, Yup, Valibot 어댑터 지원 |
+
+### React Hook Form vs TanStack Form
+
+| 항목 | React Hook Form | TanStack Form |
+|------|----------------|---------------|
+| 타입 안전성 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ (필드명 컴파일 체크) |
+| 프레임워크 지원 | React only | React, Vue, Svelte 등 |
+| 성능 최적화 | useWatch | Subscribe selector |
+| Validation | resolver | Built-in + adapters |
+
+**상세:** [references/vs-react-hook-form.md](references/vs-react-hook-form.md)
+
+---
+
 ## 상세 문서
 
 | 문서 | 용도 |
 |------|------|
+| [references/vs-react-hook-form.md](references/vs-react-hook-form.md) | React Hook Form 비교, 선택 가이드 |
+| [references/migration-guide.md](references/migration-guide.md) | React Hook Form 마이그레이션 단계별 가이드 |
 | [references/validators.md](references/validators.md) | onChange, onBlur, onChangeListenTo, async, form-level 검증 |
 | [references/subscribe-store.md](references/subscribe-store.md) | form.Subscribe, useStore 패턴 |
 | [references/advanced-patterns.md](references/advanced-patterns.md) | 배열 필드, 컴포넌트 분리, 모달 리셋, 멀티스텝, 페이지 이탈 |

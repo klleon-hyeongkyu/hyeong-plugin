@@ -28,6 +28,20 @@ mcp__context7__query-docs(libraryId="/tailwindlabs/tailwindcss", query="gradient
 
 ---
 
+## 금지 패턴 (DO/DON'T)
+
+| ❌ 금지 | ✅ 권장 | 이유 |
+|--------|--------|------|
+| `@apply` 남용 (컴포넌트) | 컴포넌트로 추상화 | React 등에서는 컴포넌트가 더 적합 |
+| `@apply` 큰 패턴 | `@apply` 작은 것만 (버튼/폼) | 유지보수성 |
+| arbitrary values 과용 | theme에 추가 | 일관성 유지 |
+| `!important` 남용 | specificity 조정 | 우선순위 문제 |
+| 인라인 스타일 혼용 | Tailwind 클래스만 | 일관성 |
+
+**상세:** [references/common-mistakes.md](references/common-mistakes.md)
+
+---
+
 ## cn() 유틸리티 (공통)
 
 ### 설치
