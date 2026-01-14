@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "hyeong-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Claude Code 스킬 모음 - 문서, 디자인, 웹 개발, 생산성 도구",
   "owner": {
     "name": "Hyeong",
