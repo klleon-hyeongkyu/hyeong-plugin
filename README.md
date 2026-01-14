@@ -1,90 +1,95 @@
 # hyeong-plugin
 
-Claude Code 플러그인 모노레포 - 필요한 플러그인만 선택 설치 가능
+Claude Code 스킬 마켓플레이스 - 문서, 디자인, 웹 개발, 생산성 도구
 
-## 구조
+## 설치
 
-```
-hyeong-plugin/
-├── plugins/
-│   ├── office/       # 문서 생성/편집
-│   ├── design/       # 디자인 관련
-│   ├── productivity/ # 생산성 도구
-│   ├── web/          # Web 개발 패턴
-│   └── dev/          # 개발 도구 + MCP 명령어
-└── README.md
+```bash
+# 마켓플레이스 추가
+/plugin marketplace add ppotatoG/hyeong-plugin
+
+# 플러그인 메뉴에서 개별 스킬 선택 설치
+/plugin
 ```
 
-## 플러그인 목록
+## 스킬 목록
 
-### office (hyeong-office)
-| Skill | 설명 |
-|-------|------|
-| `docx` | Word 문서 생성/편집 |
-| `xlsx` | Excel 스프레드시트 |
-| `pptx` | PowerPoint 프레젠테이션 |
+### Office (문서)
+
+| 스킬 | 설명 |
+|------|------|
+| `docx` | Word 문서 생성/편집 (docx.js 기반) |
+| `xlsx` | Excel 스프레드시트 생성/편집 |
+| `pptx` | PowerPoint 프레젠테이션 생성 |
 | `pdf` | PDF 생성/편집/폼 작성 |
 
-### design (hyeong-design)
-| Skill | 설명 |
-|-------|------|
-| `algorithmic-art` | p5.js 알고리즘 아트 |
+### Design (디자인)
+
+| 스킬 | 설명 |
+|------|------|
+| `algorithmic-art` | p5.js 기반 알고리즘 아트 생성 |
 | `brand-guidelines` | 브랜드 가이드라인 적용 |
-| `canvas-design` | 비주얼 디자인 생성 |
-| `theme-factory` | 테마 스타일링 |
-| `web-artifacts-builder` | 웹 아티팩트 빌더 |
+| `canvas-design` | 비주얼 디자인 생성 (포스터, 배너 등) |
+| `theme-factory` | 10가지 프리셋 테마 스타일링 |
+| `web-artifacts-builder` | React/Tailwind 웹 아티팩트 빌더 |
 
-### productivity (hyeong-productivity)
-| Skill | 설명 |
-|-------|------|
-| `doc-coauthoring` | 문서 공동 작성 워크플로우 |
-| `internal-comms` | 내부 커뮤니케이션 문서 |
-| `slack-gif-creator` | Slack용 GIF 생성 |
+### Web (웹 개발)
 
-### web (hyeong-web)
-| Skill | 설명 |
-|-------|------|
+| 스킬 | 설명 |
+|------|------|
 | `web-tailwind-patterns` | Tailwind CSS v3/v4 패턴, cn() 유틸리티 |
 | `web-tanstack-form-patterns` | TanStack Form 패턴 |
 | `web-tanstack-query-patterns` | TanStack Query + Axios 패턴 |
 | `webapp-testing` | Playwright 웹앱 테스트 |
 
-### dev (hyeong-dev)
-| Skill | 설명 |
-|-------|------|
-| `mcp-builder` | MCP 서버 구축 가이드 |
-| `skill-creator` | 스킬 생성 가이드 |
+### Dev (개발 도구)
 
-| Command | 설명 |
-|---------|------|
+| 스킬 | 설명 |
+|------|------|
+| `mcp-builder` | MCP 서버 구축 가이드 (Python/TypeScript) |
+| `skill-creator` | Claude Code 스킬 생성 가이드 |
+
+| 명령어 | 설명 |
+|--------|------|
 | `/mcp-add:local` | MCP 로컬 설치 (현재 프로젝트) |
 | `/mcp-add:global` | MCP 전역 설치 (모든 프로젝트) |
 | `/mcp-add:shared` | MCP 프로젝트 설치 (팀 공유) |
 
-## 설치
+### Productivity (생산성)
 
-### 특정 플러그인만 설치
+| 스킬 | 설명 |
+|------|------|
+| `doc-coauthoring` | 문서 공동 작성 워크플로우 |
+| `internal-comms` | 내부 커뮤니케이션 문서 작성 |
+| `slack-gif-creator` | Slack용 GIF 생성 |
 
-```bash
-# Office 플러그인만
-claude /install /Users/path/to/hyeong-plugin/plugins/office
+## 구조
 
-# Web 개발 플러그인만
-claude /install /Users/path/to/hyeong-plugin/plugins/web
-
-# Dev 도구 플러그인만
-claude /install /Users/path/to/hyeong-plugin/plugins/dev
 ```
-
-### 테스트
-
-```bash
-# 특정 플러그인 테스트
-claude --plugin-dir /path/to/hyeong-plugin/plugins/web
-
-# 다른 프로젝트에서 테스트
-cd my-project
-claude --plugin-dir /path/to/hyeong-plugin/plugins/office
+hyeong-plugin/
+├── .claude-plugin/
+│   └── marketplace.json    # 마켓플레이스 정의
+├── docx/                   # 각 스킬 폴더
+│   └── SKILL.md
+├── pdf/
+├── xlsx/
+├── pptx/
+├── algorithmic-art/
+├── brand-guidelines/
+├── canvas-design/
+├── theme-factory/
+├── web-artifacts-builder/
+├── web-tailwind-patterns/
+├── web-tanstack-form-patterns/
+├── web-tanstack-query-patterns/
+├── webapp-testing/
+├── mcp-builder/
+├── skill-creator/
+├── mcp-add/                # 명령어
+├── doc-coauthoring/
+├── internal-comms/
+├── slack-gif-creator/
+└── README.md
 ```
 
 ## 라이선스

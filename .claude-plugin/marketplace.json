@@ -1,0 +1,126 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hyeong-plugin",
+  "version": "1.0.0",
+  "description": "Claude Code 스킬 모음 - 문서, 디자인, 웹 개발, 생산성 도구",
+  "owner": {
+    "name": "Hyeong",
+    "email": "ppotatog@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "docx",
+      "description": "Word 문서 생성/편집 (docx.js 기반)",
+      "source": "./docx",
+      "category": "productivity-organization"
+    },
+    {
+      "name": "xlsx",
+      "description": "Excel 스프레드시트 생성/편집",
+      "source": "./xlsx",
+      "category": "productivity-organization"
+    },
+    {
+      "name": "pptx",
+      "description": "PowerPoint 프레젠테이션 생성",
+      "source": "./pptx",
+      "category": "productivity-organization"
+    },
+    {
+      "name": "pdf",
+      "description": "PDF 생성/편집/폼 작성",
+      "source": "./pdf",
+      "category": "productivity-organization"
+    },
+    {
+      "name": "algorithmic-art",
+      "description": "p5.js 기반 알고리즘 아트 생성",
+      "source": "./algorithmic-art",
+      "category": "creative-media"
+    },
+    {
+      "name": "brand-guidelines",
+      "description": "브랜드 가이드라인 적용",
+      "source": "./brand-guidelines",
+      "category": "creative-media"
+    },
+    {
+      "name": "canvas-design",
+      "description": "비주얼 디자인 생성 (포스터, 배너 등)",
+      "source": "./canvas-design",
+      "category": "creative-media"
+    },
+    {
+      "name": "theme-factory",
+      "description": "10가지 프리셋 테마 스타일링",
+      "source": "./theme-factory",
+      "category": "creative-media"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "description": "React/Tailwind 웹 아티팩트 빌더",
+      "source": "./web-artifacts-builder",
+      "category": "development"
+    },
+    {
+      "name": "web-tailwind-patterns",
+      "description": "Tailwind CSS v3/v4 패턴, cn() 유틸리티",
+      "source": "./web-tailwind-patterns",
+      "category": "development"
+    },
+    {
+      "name": "web-tanstack-form-patterns",
+      "description": "TanStack Form 패턴",
+      "source": "./web-tanstack-form-patterns",
+      "category": "development"
+    },
+    {
+      "name": "web-tanstack-query-patterns",
+      "description": "TanStack Query + Axios 패턴",
+      "source": "./web-tanstack-query-patterns",
+      "category": "development"
+    },
+    {
+      "name": "webapp-testing",
+      "description": "Playwright 웹앱 테스트",
+      "source": "./webapp-testing",
+      "category": "testing"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "MCP 서버 구축 가이드 (Python/TypeScript)",
+      "source": "./mcp-builder",
+      "category": "development"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Claude Code 스킬 생성 가이드",
+      "source": "./skill-creator",
+      "category": "development"
+    },
+    {
+      "name": "doc-coauthoring",
+      "description": "문서 공동 작성 워크플로우",
+      "source": "./doc-coauthoring",
+      "category": "productivity-organization"
+    },
+    {
+      "name": "internal-comms",
+      "description": "내부 커뮤니케이션 문서 작성",
+      "source": "./internal-comms",
+      "category": "communication-writing"
+    },
+    {
+      "name": "slack-gif-creator",
+      "description": "Slack용 GIF 생성",
+      "source": "./slack-gif-creator",
+      "category": "creative-media"
+    },
+    {
+      "name": "mcp-add",
+      "description": "MCP 서버 설치 명령어 (local/global/shared)",
+      "source": "./mcp-add",
+      "category": "development"
+    }
+  ]
+}
