@@ -1,0 +1,4 @@
+# Claude Code 로컬 설정
+.claude/settings.local.json
+.claude/statusline-command.sh
+.claude/statusline-command.ps1
